@@ -1,0 +1,51 @@
+/* Editing ScrollPane and ScrollBar style */
+
+/* Style for the ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar */
+.scroll-bar {
+    -fx-padding: 4px;
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar Track */
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar Thumb */
+.scroll-bar .thumb {
+    -fx-background-color: #2A5ACB;
+    -fx-background-insets: 2;
+    -fx-background-radius: 5;
+}
+
+/* Style for when we hover over the ScrollBar Thumb */
+.scroll-bar .thumb:hover {
+    -fx-background-color: #112655;
+}
+
+/* Style for the increment/decrement ScrollBar Buttons */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Style for the increment/decrement ScrollBar Arrows */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #2A5ACB;
+}
+
+/* Style for the increment/decrement ScrollBar Arrows when we hover over them */
+.scroll-bar .increment-arrow:hover,
+.scroll-bar .decrement-arrow:hover {
+    -fx-background-color: #112655;
+}

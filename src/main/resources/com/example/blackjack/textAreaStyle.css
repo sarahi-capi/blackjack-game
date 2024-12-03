@@ -1,0 +1,48 @@
+/* Editing TextArea */
+.text-area {
+    -fx-background-color: transparent;
+    -fx-scrollbar-policy: never;
+}
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar Track */
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* Style for the ScrollBar Thumb */
+.scroll-bar .thumb {
+    -fx-background-color: transparent;
+}
+
+/* Style for the increment/decrement ScrollBar Buttons */
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* Style for the increment/decrement ScrollBar Arrows */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+}

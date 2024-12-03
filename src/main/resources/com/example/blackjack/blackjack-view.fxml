@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blackjack.BlackJackController">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #101014, #E21212);">
+      <AnchorPane fx:id="homeScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #101014, #E21212);">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="90.0" prefHeight="102.0" prefWidth="218.0" text="Black" textAlignment="CENTER" textFill="WHITE">
                <font>
@@ -52,8 +52,299 @@
             </HBox>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="gameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #002907, #008318);">
+      <AnchorPane fx:id="gameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #002907, #008318);" visible="false">
          <children>
+            <VBox alignment="CENTER" layoutX="18.0" layoutY="235.0" prefHeight="127.0" prefWidth="562.0">
+               <children>
+                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="playerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="playerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="19.0" layoutY="32.0" prefHeight="127.0" prefWidth="562.0">
+               <children>
+                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
+                           <children>
+                              <Text fx:id="dealerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
+                                 <font>
+                                    <Font name="Rockwell" size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="dealerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <StackPane layoutX="38.0" layoutY="368.0" prefHeight="76.0" prefWidth="522.0">
+               <children>
+                  <HBox fx:id="hitStandButtons" alignment="CENTER" prefHeight="76.0" prefWidth="415.0" spacing="85.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#onHit" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Hit" textAlignment="CENTER">
+                           <font>
+                              <Font name="Rockwell" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="216.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onStand" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Stand" textAlignment="CENTER">
+                           <font>
+                              <Font name="Rockwell" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onMouseClicked="#onNext" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Next" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Rockwell" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </StackPane>
+            <Text fx:id="winOrLoseMessage" fill="WHITE" layoutX="117.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win!" textAlignment="CENTER" wrappingWidth="364.4000244140625">
+               <font>
+                  <Font name="Rockwell" size="30.0" />
+               </font>
+            </Text>
+            <Button alignment="CENTER" layoutX="556.0" layoutY="404.0" mnemonicParsing="false" onMouseClicked="#goHowToPlayScreen" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #3464D5; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" text="?" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="scoreDealerDisplay" alignment="CENTER" layoutX="535.0" layoutY="159.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Rockwell" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="scorePlayerDisplay" alignment="CENTER" layoutX="18.0" layoutY="196.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="19.0" />
+               </font>
+            </Button>
             <AnchorPane fx:id="placeBetScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FDEDEC; -fx-background-radius: 18; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #E82F21, #101014); -fx-border-width: 10;" visible="false">
                <children>
                   <Label layoutX="203.0" layoutY="35.0" text="Place your bet" textAlignment="CENTER">
@@ -179,12 +470,12 @@
                   </HBox>
                   <HBox alignment="CENTER" layoutX="40.0" layoutY="326.0" prefHeight="51.0" prefWidth="514.0" spacing="25.0">
                      <children>
-                        <Label fx:id="youHaveText" prefHeight="19.0" prefWidth="206.0">
+                        <Label fx:id="youHaveText" prefHeight="19.0" prefWidth="206.0" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="youBetText" layoutX="164.0" layoutY="26.0" prefHeight="19.0" prefWidth="206.0">
+                        <Label fx:id="youBetText" layoutX="164.0" layoutY="26.0" prefHeight="19.0" prefWidth="206.0" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="16.0" />
                            </font>
@@ -198,287 +489,6 @@
                   </Button>
                </children>
             </AnchorPane>
-            <VBox alignment="CENTER" layoutX="18.0" layoutY="235.0" prefHeight="127.0" prefWidth="562.0">
-               <children>
-                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub7" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub5" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub6" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub8" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub3" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub1" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub2" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="playerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="playerCardClub4" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" layoutX="19.0" layoutY="32.0" prefHeight="127.0" prefWidth="562.0">
-               <children>
-                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub7" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub5" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub6" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub8" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub3" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub1" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub2" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
-                           <children>
-                              <Text fx:id="dealerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
-                                 <font>
-                                    <Font name="Rockwell" size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextArea fx:id="dealerCardClub4" editable="false" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
-                                 <font>
-                                    <Font name="Lucida Sans Typewriter Regular" size="3.0" />
-                                 </font>
-                              </TextArea>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <StackPane fx:id="nextButton" layoutX="38.0" layoutY="368.0" prefHeight="76.0" prefWidth="522.0">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="59.0" prefWidth="499.0" spacing="75.0">
-                     <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#onHit" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Hit" textAlignment="CENTER">
-                           <font>
-                              <Font name="Rockwell" size="19.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="216.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onStand" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Stand" textAlignment="CENTER">
-                           <font>
-                              <Font name="Rockwell" size="19.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <Button mnemonicParsing="false" onMouseClicked="#onNext" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Next" textAlignment="CENTER" visible="false">
-                     <font>
-                        <Font name="Rockwell" size="19.0" />
-                     </font>
-                  </Button>
-               </children>
-            </StackPane>
-            <Text fx:id="winOrLoseMessage" fill="WHITE" layoutX="117.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win!" textAlignment="CENTER" visible="false" wrappingWidth="364.4000244140625">
-               <font>
-                  <Font name="Rockwell" size="51.0" />
-               </font>
-            </Text>
-            <Button alignment="CENTER" layoutX="556.0" layoutY="404.0" mnemonicParsing="false" onMouseClicked="#goHowToPlayScreen" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #3464D5; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" text="?" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Rockwell" size="19.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="howToPlayScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #DDE5F8; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #101014, #2A5ACB); -fx-border-width: 10.5;" visible="false">

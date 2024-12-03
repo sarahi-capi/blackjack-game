@@ -1,19 +1,26 @@
 package com.example.blackjack;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class BlackJackController {
 
     // VARIABLES
 
     // Screen variables
+    @FXML
+    private AnchorPane homeScreen; // "Home" Pane
     @FXML
     private AnchorPane howToPlayScreen; // "How to Play" Pane
     @FXML
@@ -37,9 +44,15 @@ public class BlackJackController {
 
     // Game variables
     @FXML
-    private StackPane nextButton; // To have access to "Next" button
+    private HBox hitStandButtons; // Hit and Stand buttons
+    @FXML
+    private Button nextButton; // To have access to "Next" button
     @FXML
     private Text winOrLoseMessage; // A win or lose text
+    @FXML
+    private Button scoreDealerDisplay; // Dealer score
+    @FXML
+    private Button scorePlayerDisplay; // Player score
 
     // Variables to change player's Card Club
     @FXML
@@ -59,6 +72,9 @@ public class BlackJackController {
     @FXML
     private TextArea playerCardClub8;
 
+    // Array to store the player's cards club that are on the table
+    private ArrayList<TextArea> playerTableCardClub = new ArrayList<>();
+
     // Variables to change player's Card Value
     @FXML
     private Text playerCardValue1;
@@ -76,6 +92,9 @@ public class BlackJackController {
     private Text playerCardValue7;
     @FXML
     private Text playerCardValue8;
+
+    // Array to store the player's cards value that are on the table
+    private ArrayList<Text> playerTableCardValue = new ArrayList<>();
 
     // Variables to change dealer's Card Club
     @FXML
@@ -95,6 +114,9 @@ public class BlackJackController {
     @FXML
     private TextArea dealerCardClub8;
 
+    // Array to store the dealer's cards club that are on the table
+    private ArrayList<TextArea> dealerTableCardClub = new ArrayList<>();
+
     // Variables to change dealer's Card Value
     @FXML
     private Text dealerCardValue1;
@@ -112,6 +134,9 @@ public class BlackJackController {
     private Text dealerCardValue7;
     @FXML
     private Text dealerCardValue8;
+
+    // Array to store the dealer's cards value that are on the table
+    private ArrayList<Text> dealerTableCardValue = new ArrayList<>();
 
     // Clubs
 
@@ -175,7 +200,15 @@ public class BlackJackController {
                             "            %%.           \n" +
                             "           *%%#           \n";
 
+    private final String[] clubArray = {"diamondClub", "spadeClub", "heartClub", "cloverClub"}; // Array with clubs
+    private final String[] specialValues = {"J", "Q", "K", "A"}; // Array with the special values of the cards
 
+    // ArrayLists for player and dealer's deck
+    private ArrayList<Card> playerDeck = new ArrayList<>();
+    private ArrayList<Card> dealerDeck = new ArrayList<>();
+
+    private int playingCardCounter = 0; // Counter to keep track of the cards being played
+    private ArrayList<Card> newDeck = newCardArray(); // Shuffled deck
 
     // METHODS
 
@@ -195,11 +228,58 @@ public class BlackJackController {
     // Switch to "Game" Screen
     @FXML
     void goPlayGameScreen(MouseEvent event) {
+        fillArrayList();
         gameScreen.setVisible(true);
         placeBetScreen.setVisible(true);
+        nextButton.setVisible(false);
         betMoney = minimumBet;
         yourMoney -= 10;
         updateQuantities();
+    }
+
+    // Initialize variables
+    void fillArrayList() {
+        playerTableCardClub.clear();
+        playerTableCardValue.clear();
+        dealerTableCardClub.clear();
+        dealerTableCardValue.clear();
+
+        playerTableCardClub.add(playerCardClub1);
+        playerTableCardClub.add(playerCardClub2);
+        playerTableCardClub.add(playerCardClub3);
+        playerTableCardClub.add(playerCardClub4);
+        playerTableCardClub.add(playerCardClub5);
+        playerTableCardClub.add(playerCardClub6);
+        playerTableCardClub.add(playerCardClub7);
+        playerTableCardClub.add(playerCardClub8);
+
+        playerTableCardValue.add(playerCardValue1);
+        playerTableCardValue.add(playerCardValue2);
+        playerTableCardValue.add(playerCardValue3);
+        playerTableCardValue.add(playerCardValue4);
+        playerTableCardValue.add(playerCardValue5);
+        playerTableCardValue.add(playerCardValue6);
+        playerTableCardValue.add(playerCardValue7);
+        playerTableCardValue.add(playerCardValue8);
+
+        dealerTableCardClub.add(dealerCardClub1);
+        dealerTableCardClub.add(dealerCardClub2);
+        dealerTableCardClub.add(dealerCardClub3);
+        dealerTableCardClub.add(dealerCardClub4);
+        dealerTableCardClub.add(dealerCardClub5);
+        dealerTableCardClub.add(dealerCardClub6);
+        dealerTableCardClub.add(dealerCardClub7);
+        dealerTableCardClub.add(dealerCardClub8);
+
+        dealerTableCardValue.add(dealerCardValue1);
+        dealerTableCardValue.add(dealerCardValue2);
+        dealerTableCardValue.add(dealerCardValue3);
+        dealerTableCardValue.add(dealerCardValue4);
+        dealerTableCardValue.add(dealerCardValue5);
+        dealerTableCardValue.add(dealerCardValue6);
+        dealerTableCardValue.add(dealerCardValue7);
+        dealerTableCardValue.add(dealerCardValue8);
+
     }
 
     // Update "Your Money" and "Your bet" texts
@@ -208,16 +288,168 @@ public class BlackJackController {
         youBetText.setText("Your bet: " + betMoney);
     }
 
-    // Create cards clubs
-    void cardClub(TextArea card, String cardClub){
-        card.setText(cardClub);
+    // Clean game Table
+    void cleanTable() {
+        // For the player's cards
+        for (TextArea playerClub : playerTableCardClub) {
+            playerClub.setEditable(true);
+            playerClub.setText("");
+            playerClub.setEditable(false);
+        }
+
+        for (Text playerValue : playerTableCardValue) {
+            playerValue.setText("");
+        }
+
+        // For the dealer's cards
+        for (TextArea dealerClub : dealerTableCardClub) {
+            dealerClub.setEditable(true);
+            dealerClub.setText("");
+            dealerClub.setEditable(false);
+        }
+
+        for (Text dealerValue : dealerTableCardValue) {
+            dealerValue.setText("");
+        }
+    }
+
+    // Create club images
+    private String clubToImage(String club) {
+
+        if (club.equals("diamondClub")) {
+            return diamondClub;
+        } else if (club.equals("cloverClub")) {
+            return cloverClub;
+        } else if (club.equals("heartClub")) {
+            return heartClub;
+        } else if (club.equals("spadeClub")) {
+            return spadeClub;
+        } else {
+            return "";
+        }
+
+    }
+
+    // Add the cards to the table
+    void printToTable(Card card, Text value, TextArea club) {
+        club.setText(clubToImage(card.getClub()));
+        value.setText(String.valueOf(card.getValue()));
+    }
+
+    // Reset the array and shuffle it
+    private ArrayList<Card> newCardArray() {
+        ArrayList<Card> cardArray = new ArrayList<>();
+
+        // Array of cards' values
+        for (String club : clubArray) {
+            for (int i = 2; i < 10; i++){
+                cardArray.add(new Card(String.valueOf(i), club));
+            }
+        }
+
+        // Array of special cards' values
+        for(String club : clubArray) {
+            for(String value : specialValues) {
+                cardArray.add(new Card(value, club));
+            }
+        }
+
+        // Shuffle the array
+        Collections.shuffle(cardArray);
+        return cardArray;
+    }
+
+    // Get Score from cards
+    int getScore(ArrayList<Card> cardArray) {
+        ArrayList<Card> auxCardArray = new ArrayList<>(cardArray); // To not delete values from the input card array
+        int score = 0;
+
+        // Counting everything but Aces
+        for (Card card : cardArray) {
+
+            if (!card.getValue().equals("A")) {
+
+                if (card.getValue().equals("J") || card.getValue().equals("Q") || card.getValue().equals("K")) {
+
+                    score += 10;
+                    auxCardArray.remove(card);
+
+                } else {
+
+                    score += Integer.parseInt(card.getValue());
+                    auxCardArray.remove(card);
+
+                }
+            }
+
+        }
+
+        // Now we only have to deal with Aces, choose whether its value 1 or 11
+        for (int i = 0; i < auxCardArray.size(); i++) {
+
+            if (score + 11 + auxCardArray.size() - (i + 1) > 21) { // To see if we can add 11 or we need to add 1
+                score += 1;
+            } else {
+                score += 11;
+            }
+
+        }
+
+        return score;
     }
 
     // Place Bet
     @FXML
     void placeBet(MouseEvent event) {
         placeBetScreen.setVisible(false);
+        hitStandButtons.setVisible(false);
+        winOrLoseMessage.setText("");
 
+        // Cleaning the table
+        cleanTable();
+        // Shuffled deck
+        newDeck = newCardArray();
+
+        // Give the first card to the player
+        Card firstCard = newDeck.getFirst();
+        playerDeck.add(firstCard);
+
+        // Setting player's card in the table
+        printToTable(firstCard, playerTableCardValue.getFirst(), playerTableCardClub.getFirst());
+        newDeck.removeFirst();
+
+        // Give the second card to the dealer
+        Card secondCard = newDeck.getFirst();
+        dealerDeck.add(secondCard);
+
+        // Setting dealer's card in the table
+        printToTable(secondCard, dealerTableCardValue.getFirst(), dealerTableCardClub.getFirst());
+        newDeck.removeFirst();
+
+        // Give the third card to the player
+        Card thirdCard = newDeck.getFirst();
+        playerDeck.add(thirdCard);
+
+        // Setting player's card in the table
+        printToTable(thirdCard, playerTableCardValue.get(1), playerTableCardClub.get(1));
+        newDeck.removeFirst();
+
+        // Give the fourth card to the dealer
+        Card fourthCard = newDeck.getFirst();
+        dealerDeck.add(fourthCard);
+
+        // Display player's score
+        scorePlayerDisplay.setText(String.valueOf(getScore(playerDeck)));
+
+        if (getScore(playerDeck) == 21) {
+            winOrLoseMessage.setText("BlackJack! You won :)");
+            yourMoney += (int) (betMoney * 1.5);
+            nextButton.setVisible(true);
+        } else {
+            hitStandButtons.setVisible(true);
+            playingCardCounter = 2;
+            
+        }
     }
 
     // Add 10 to the bet
@@ -303,19 +535,133 @@ public class BlackJackController {
     // When "Hit" button is pressed
     @FXML
     void onHit(MouseEvent event) {
+        playerDeck.add(newDeck.getFirst());
+        newDeck.removeFirst();
+        printToTable(playerDeck.get(playingCardCounter), playerTableCardValue.get(playingCardCounter),
+                playerTableCardClub.get(playingCardCounter));
+        int getScore = getScore(playerDeck);
+        scorePlayerDisplay.setText(String.valueOf(getScore));
 
+        if (getScore == 21) {
+            onStand(event);
+        } else if (getScore > 21) {
+            winOrLoseMessage.setText("Bad Luck! You lost :(");
+            hitStandButtons.setVisible(false);
+            nextButton.setVisible(true);
+        }
+        playingCardCounter++;
     }
 
     // When "Stand" button is pressed
     @FXML
     void onStand(MouseEvent event) {
+        int currentCardCounter = 1;
+        printToTable(dealerDeck.get(1), dealerTableCardValue.get(1), dealerTableCardClub.get(1));
+        scoreDealerDisplay.setVisible(true);
+        scoreDealerDisplay.setText(String.valueOf(getScore(dealerDeck)));
 
+        if (getScore(dealerDeck) > 17) {
+            
+            if (getScore(playerDeck) < getScore(dealerDeck)) {
+
+                winOrLoseMessage.setText("Bad Luck! You lost :(");
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            } else if (getScore(playerDeck) == getScore(dealerDeck)) {
+
+                winOrLoseMessage.setText("Push! Nobody wins :O");
+                yourMoney += betMoney;
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            } else {
+
+                winOrLoseMessage.setText("Wonderful! You won! :)");
+                yourMoney += 2 * betMoney;
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            }
+
+        } else {
+            while (getScore(dealerDeck) < 17 ) {
+                currentCardCounter++;
+                Card drawnCard = newDeck.getFirst();
+                newDeck.removeFirst();
+                dealerDeck.add(drawnCard);
+                printToTable(dealerDeck.get(currentCardCounter), dealerTableCardValue.get(currentCardCounter),
+                        dealerTableCardClub.get(currentCardCounter));
+            }
+
+            scoreDealerDisplay.setText(String.valueOf(getScore(dealerDeck)));
+
+            if (getScore(dealerDeck) > 21) {
+
+                winOrLoseMessage.setText("Wonderful! You won! :)");
+                yourMoney += 2 * betMoney;
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            } else if (getScore(playerDeck) < getScore(dealerDeck)) {
+
+                winOrLoseMessage.setText("Bad Luck! You lost :(");
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            } else if (getScore(playerDeck) == getScore(dealerDeck)) {
+
+                winOrLoseMessage.setText("Push! Nobody wins :O");
+                yourMoney += betMoney;
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            } else if (getScore(playerDeck) > getScore(dealerDeck)) {
+
+                winOrLoseMessage.setText("Wonderful! You won! :)");
+                yourMoney += 2 * betMoney;
+                hitStandButtons.setVisible(false);
+                nextButton.setVisible(true);
+
+            }
+        }
     }
 
     // When "Next" button is pressed
     @FXML
     void onNext(MouseEvent event) {
+        if (yourMoney >= minimumBet) {
+            betMoney = minimumBet;
+            yourMoney -= minimumBet;
 
+            youHaveText.setText("You have: " + yourMoney);
+            youBetText.setText("Your bet: " + betMoney);
+
+            scorePlayerDisplay.setText("");
+
+            playerDeck.clear();
+            dealerDeck.clear();
+
+            scoreDealerDisplay.setVisible(false);
+            placeBetScreen.setVisible(true);
+            nextButton.setVisible(false);
+        } else {
+            betMoney = minimumBet;
+
+            youHaveText.setText("You have: " + yourMoney);
+            youBetText.setText("Your bet: " + betMoney);
+
+            scorePlayerDisplay.setText("");
+
+            playerDeck.clear();
+            dealerDeck.clear();
+
+            yourMoney = 200;
+
+            scoreDealerDisplay.setVisible(false);
+            gameScreen.setVisible(false);
+            homeScreen.setVisible(true);
+        }
     }
 
 }

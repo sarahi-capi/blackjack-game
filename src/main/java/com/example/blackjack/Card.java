@@ -1,0 +1,33 @@
+package com.example.blackjack;
+
+public class Card {
+    private String club;
+    private String value;
+
+    // Card Constructor
+    public Card(String value, String club) {
+        this.club = club;
+        this.value = value;
+    }
+
+    // Get Club
+    public String getClub() {
+        return this.club;
+    }
+
+    // Set Club
+    public void setClub(String newClub) {
+        this.club = newClub;
+    }
+
+    // Get Value
+    public String getValue() {
+        return this.value;
+    }
+
+    // Set Value
+    public void setValue(String newValue) {
+        this.value = newValue;
+    }
+}
+

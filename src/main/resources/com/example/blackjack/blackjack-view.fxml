@@ -51,9 +51,9 @@
             </HBox>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="gameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #002907, #008318);">
+      <AnchorPane fx:id="gameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #002907, #008318);" visible="false">
          <children>
-            <AnchorPane fx:id="placeBetScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FDEDEC; -fx-background-radius: 18; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #E82F21, #101014); -fx-border-width: 10;">
+            <AnchorPane fx:id="placeBetScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FDEDEC; -fx-background-radius: 18; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #E82F21, #101014); -fx-border-width: 10;" visible="false">
                <children>
                   <Label layoutX="203.0" layoutY="35.0" text="Place your bet" textAlignment="CENTER">
                      <font>

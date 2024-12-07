@@ -12,20 +12,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blackjack.BlackJackController">
+<!-- Root -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blackjack.BlackJackController">
    <children>
+
+
+      <!-- "Home" Screen -->
       <AnchorPane fx:id="homeScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #101014, #E21212);">
          <children>
+
+            <!-- "Black" Label -->
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="90.0" prefHeight="102.0" prefWidth="218.0" text="Black" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="82.0" />
                </font>
             </Label>
+
+            <!-- "Jack" Label -->
             <Label alignment="CENTER" layoutX="235.0" layoutY="160.0" prefHeight="102.0" prefWidth="172.0" text="Jack" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="82.0" />
                </font>
             </Label>
+
+            <!-- Chip images made with ASCII art -->
             <TextArea editable="false" layoutX="364.0" layoutY="52.0" prefHeight="148.0" prefWidth="153.0" rotate="25.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" text="                                                       &#10;                                                       &#10;                                                       &#10;                  .:+X$$XxxxxxX$$X+:.                  &#10;               .x&amp;&amp;&amp;&amp;&amp;&amp;        .&amp;&amp;&amp;&amp;&amp;&amp;x.               &#10;            .;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.::;::.:&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+++xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$..        &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$Xx;;;xx$&amp;&amp;$;.;$&amp;:.  :$;.       &#10;       ;$:   +&amp;+.+&amp;&amp;x.          ..x&amp;&amp;+.+&amp;+.  .$;.      &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;     .X;  .+&amp;::&amp;&amp;                    .&amp;&amp;::&amp;x.  ;X.     &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.&amp;&amp;&amp;&amp;&amp;&amp;x.    &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.$&amp;&amp;&amp;&amp;&amp;x.    &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     .X;...+&amp;::&amp;&amp;.                   .&amp;&amp;::&amp;x...;X.     &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;       ;$:   +&amp;+.x&amp;&amp;x..        ...x&amp;&amp;x.+&amp;+   .$;       &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$x+;;;+xX&amp;&amp;$;.;$&amp;:. .:$;        &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$.         &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+;+xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;            .+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.:;;;:.;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;             ...x&amp;&amp;&amp;&amp;&amp;&amp;.       .&amp;&amp;&amp;&amp;&amp;&amp;x..              &#10;                 ..;xX$$xx+++xxX$Xx;.                  &#10;                         .  ..                         &#10;                                                       &#10;                                                       &#10;" wrapText="true">
                <font>
                   <Font name="Lucida Sans Typewriter Regular" size="4.0" />
@@ -36,474 +46,723 @@
                   <Font name="Lucida Sans Typewriter Regular" size="4.0" />
                </font>
             </TextArea>
+
+            <!-- Buttons to play the game or to read how to play the game -->
             <HBox alignment="CENTER" layoutX="66.0" layoutY="311.0" prefHeight="100.0" prefWidth="467.0" spacing="85.0">
                <children>
+
+                  <!-- "Play Game!" button -->
                   <Button mnemonicParsing="false" onMouseClicked="#goPlayGameScreen" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #2A5ACB; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-style: dotted;" text="Play Game!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="Rockwell" size="20.0" />
                      </font>
                   </Button>
+
+                  <!-- "Rules" button-->
                   <Button mnemonicParsing="false" onMouseClicked="#goHowToPlayScreen" prefHeight="76.0" prefWidth="135.0" style="-fx-background-color: #2A5ACB; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-style: dotted;" text="Rules" textFill="WHITE">
                      <font>
                         <Font name="Rockwell" size="20.0" />
                      </font>
                   </Button>
+
                </children>
             </HBox>
+
          </children>
       </AnchorPane>
+
+
+      <!-- "Game" Screen -->
       <AnchorPane fx:id="gameScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #002907, #008318);" visible="false">
          <children>
+
+            <!-- Layout of the Game's Table for the Player -->
             <VBox alignment="CENTER" layoutX="18.0" layoutY="235.0" prefHeight="127.0" prefWidth="562.0">
                <children>
+
+                  <!-- First Player's Card Slots -->
                   <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
+
+                        <!-- Slot 7 in the Table -->
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 7 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 7 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 5 in the Table -->
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 5 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 5 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 6 in the Table -->
                         <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 6 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 6 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 8 in the Table -->
                         <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 8 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 8 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
                      </children>
                   </HBox>
+
+                  <!-- Second Player's Card Slots -->
                   <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
+
+                        <!-- Slot 3 in the Table -->
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 3 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 3 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 1 in the Table -->
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 1 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 1 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 2 in the Table -->
                         <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 2 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 2 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 4 in the Table -->
                         <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 4 to display the Player's Card Value -->
                               <Text fx:id="playerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 4 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="playerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
+
                            </children>
                         </HBox>
+
                      </children>
                   </HBox>
+
                </children>
             </VBox>
+
+            <!-- Layout of the Game's Table for the Dealer -->
             <VBox alignment="CENTER" layoutX="19.0" layoutY="32.0" prefHeight="127.0" prefWidth="562.0">
                <children>
+
+                  <!-- First Dealer's Card Slots -->
                   <HBox layoutX="10.0" layoutY="60.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
+
+                        <!-- Slot 7 in the Table -->
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 7 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue7" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 7 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 5 in the Table -->
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 5 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 5 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 6 in the Table -->
                         <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 6 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 6 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 8 in the Table -->
                         <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 8 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue8" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 8 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
                      </children>
                   </HBox>
+
+                  <!-- Second Dealer's Card Slots -->
                   <HBox layoutX="10.0" layoutY="24.0" prefHeight="100.0" prefWidth="200.0">
                      <children>
+
+                        <!-- Slot 3 in the Table -->
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 3 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 3 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 1 in the Table -->
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 1 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 1 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 2 in the Table -->
                         <HBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 2 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 2 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
+                        <!-- Slot 4 in the Table -->
                         <HBox alignment="CENTER" layoutX="384.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 5;">
                            <children>
+
+                              <!-- Slot 4 to display the Dealer's Card Value -->
                               <Text fx:id="dealerCardValue4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="43.99651896953583">
                                  <font>
                                     <Font name="Rockwell" size="35.0" />
                                  </font>
                               </Text>
+
+                              <!-- Slot 4 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
                               <TextArea fx:id="dealerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
                               </TextArea>
+
                            </children>
                         </HBox>
+
                      </children>
                   </HBox>
+
                </children>
             </VBox>
+
+            <!-- "Hit", "Stand" and "Next" Buttons -->
             <StackPane layoutX="38.0" layoutY="368.0" prefHeight="76.0" prefWidth="522.0">
                <children>
+
+                  <!-- "Hit" and "Stand" Buttons to play the game -->
                   <HBox fx:id="hitStandButtons" alignment="CENTER" prefHeight="76.0" prefWidth="415.0" spacing="85.0">
                      <children>
+
+                        <!-- "Hit" Button -->
                         <Button mnemonicParsing="false" onMouseClicked="#onHit" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Hit" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="19.0" />
                            </font>
                         </Button>
+
+                        <!-- "Stand" Button -->
                         <Button layoutX="216.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onStand" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Stand" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="19.0" />
                            </font>
                         </Button>
+
                      </children>
                   </HBox>
+
+                  <!-- When the player wins or loses, the button "Next" will appear to move to different screens -->
                   <Button fx:id="nextButton" mnemonicParsing="false" onMouseClicked="#onNext" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: #FFBD00; -fx-border-color: #E82F21; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Next" textAlignment="CENTER" visible="false">
                      <font>
                         <Font name="Rockwell" size="19.0" />
                      </font>
                   </Button>
+
                </children>
             </StackPane>
+
+            <!-- "You Win" o "You Lose" messages -->
             <Text fx:id="winOrLoseMessage" fill="WHITE" layoutX="117.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Win!" textAlignment="CENTER" wrappingWidth="364.4000244140625">
                <font>
                   <Font name="Rockwell" size="30.0" />
                </font>
             </Text>
+
+            <!-- "Rules" Button -->
             <Button alignment="CENTER" layoutX="556.0" layoutY="404.0" mnemonicParsing="false" onMouseClicked="#goHowToPlayScreen" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #3464D5; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" text="?" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="19.0" />
                </font>
             </Button>
+
+            <!-- To display the player's score -->
             <Button fx:id="scoreDealerDisplay" alignment="CENTER" layoutX="535.0" layoutY="159.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE" visible="false">
                <font>
                   <Font name="Rockwell" size="19.0" />
                </font>
             </Button>
+
+            <!-- To display the dealer's score -->
             <Button fx:id="scorePlayerDisplay" alignment="CENTER" layoutX="18.0" layoutY="196.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="19.0" />
                </font>
             </Button>
+
+
+            <!-- "Place Bet" Screen -->
             <AnchorPane fx:id="placeBetScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FDEDEC; -fx-background-radius: 18; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #E82F21, #101014); -fx-border-width: 10;" visible="false">
                <children>
+
+                  <!-- "Place your bet" Label -->
                   <Label layoutX="203.0" layoutY="35.0" text="Place your bet" textAlignment="CENTER">
                      <font>
                         <Font name="Rockwell" size="29.0" />
                      </font>
                   </Label>
+
+                  <!-- Chips Layout -->
                   <HBox alignment="CENTER" layoutX="12.0" layoutY="88.0" prefHeight="199.0" prefWidth="530.0">
                      <children>
+
+                        <!-- 10 Chip Layout -->
                         <VBox alignment="CENTER" prefHeight="160.0" prefWidth="126.0">
                            <children>
+
+                              <!-- "Add 10" Button -->
                               <Button mnemonicParsing="false" onMouseClicked="#plusButton10" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 50;" text="+" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
+                              <!-- Display the 10 chip with its value -->
                               <StackPane prefHeight="128.0" prefWidth="144.0">
                                  <children>
+
+                                    <!-- Chip image created with ASCII art -->
                                     <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="144.0" style="-fx-text-fill: black;" stylesheets="@textAreaStyle.css" text="                                                       &#10;                                                       &#10;                                                       &#10;                  .:+X$$XxxxxxX$$X+:.                  &#10;               .x&amp;&amp;&amp;&amp;&amp;&amp;        .&amp;&amp;&amp;&amp;&amp;&amp;x.               &#10;            .;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.::;::.:&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+++xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$..        &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$Xx;;;xx$&amp;&amp;$;.;$&amp;:.  :$;.       &#10;       ;$:   +&amp;+.+&amp;&amp;x.          ..x&amp;&amp;+.+&amp;+.  .$;.      &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;     .X;  .+&amp;::&amp;&amp;                    .&amp;&amp;::&amp;x.  ;X.     &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.&amp;&amp;&amp;&amp;&amp;&amp;x.    &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.$&amp;&amp;&amp;&amp;&amp;x.    &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     .X;...+&amp;::&amp;&amp;.                   .&amp;&amp;::&amp;x...;X.     &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;       ;$:   +&amp;+.x&amp;&amp;x..        ...x&amp;&amp;x.+&amp;+   .$;       &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$x+;;;+xX&amp;&amp;$;.;$&amp;:. .:$;        &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$.         &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+;+xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;            .+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.:;;;:.;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;             ...x&amp;&amp;&amp;&amp;&amp;&amp;.       .&amp;&amp;&amp;&amp;&amp;&amp;x..              &#10;                 ..;xX$$xx+++xxX$Xx;.                  &#10;                         .  ..                         &#10;                                                       &#10;                                                       &#10;" wrapText="true">
                                        <font>
                                           <Font name="Lucida Sans Typewriter Regular" size="4.0" />
                                        </font>
                                     </TextArea>
+
+                                    <!-- "10" Label -->
                                     <Label text="10 " textAlignment="CENTER">
                                        <font>
                                           <Font name="Rockwell" size="26.0" />
                                        </font>
                                     </Label>
+
                                  </children>
                               </StackPane>
+
+                              <!-- "Remove 10" Button -->
                               <Button layoutX="64.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#minusButton10" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: black; -fx-background-radius: 50;" text="-" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
                            </children>
                         </VBox>
+
+                        <!-- 20 Chip Layout -->
                         <VBox alignment="CENTER" layoutX="204.0" layoutY="10.0" prefHeight="160.0" prefWidth="126.0">
                            <children>
+
+                              <!-- "Add 20" Button -->
                               <Button mnemonicParsing="false" onMouseClicked="#plusButton20" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #E82F21; -fx-background-radius: 50;" text="+" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
+                              <!-- Display the 20 chip with its value -->
                               <StackPane prefHeight="128.0" prefWidth="144.0">
                                  <children>
+
+                                    <!-- Chip image created with ASCII art -->
                                     <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="144.0" style="-fx-text-fill: #E82F21;" stylesheets="@textAreaStyle.css" text="                                                       &#10;                                                       &#10;                                                       &#10;                  .:+X$$XxxxxxX$$X+:.                  &#10;               .x&amp;&amp;&amp;&amp;&amp;&amp;        .&amp;&amp;&amp;&amp;&amp;&amp;x.               &#10;            .;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.::;::.:&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+++xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$..        &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$Xx;;;xx$&amp;&amp;$;.;$&amp;:.  :$;.       &#10;       ;$:   +&amp;+.+&amp;&amp;x.          ..x&amp;&amp;+.+&amp;+.  .$;.      &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;     .X;  .+&amp;::&amp;&amp;                    .&amp;&amp;::&amp;x.  ;X.     &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.&amp;&amp;&amp;&amp;&amp;&amp;x.    &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.$&amp;&amp;&amp;&amp;&amp;x.    &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     .X;...+&amp;::&amp;&amp;.                   .&amp;&amp;::&amp;x...;X.     &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;       ;$:   +&amp;+.x&amp;&amp;x..        ...x&amp;&amp;x.+&amp;+   .$;       &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$x+;;;+xX&amp;&amp;$;.;$&amp;:. .:$;        &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$.         &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+;+xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;            .+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.:;;;:.;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;             ...x&amp;&amp;&amp;&amp;&amp;&amp;.       .&amp;&amp;&amp;&amp;&amp;&amp;x..              &#10;                 ..;xX$$xx+++xxX$Xx;.                  &#10;                         .  ..                         &#10;                                                       &#10;                                                       &#10;" wrapText="true">
                                        <font>
                                           <Font name="Lucida Sans Typewriter Regular" size="4.0" />
                                        </font>
                                     </TextArea>
+
+                                    <!-- "20" Label -->
                                     <Label text="20 " textAlignment="CENTER" textFill="#e82f21">
                                        <font>
                                           <Font name="Rockwell" size="26.0" />
                                        </font>
                                     </Label>
+
                                  </children>
                               </StackPane>
+
+                              <!-- "Remove 20" Button -->
                               <Button layoutX="64.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#minusButton20" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #E82F21; -fx-background-radius: 50;" text="-" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
                            </children>
                         </VBox>
+
+                        <!-- 50 Chip Layout -->
                         <VBox alignment="CENTER" layoutX="276.0" layoutY="10.0" prefHeight="160.0" prefWidth="126.0">
                            <children>
+
+                              <!-- "Add 50" Button -->
                               <Button mnemonicParsing="false" onMouseClicked="#plusButton50" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #00A31B; -fx-background-radius: 50;" text="+" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
+                              <!-- Display the 50 chip with its value -->
                               <StackPane prefHeight="128.0" prefWidth="144.0">
                                  <children>
+
+                                    <!-- Chip image created with ASCII art -->
                                     <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="144.0" style="-fx-text-fill: #00A31B;" stylesheets="@textAreaStyle.css" text="                                                       &#10;                                                       &#10;                                                       &#10;                  .:+X$$XxxxxxX$$X+:.                  &#10;               .x&amp;&amp;&amp;&amp;&amp;&amp;        .&amp;&amp;&amp;&amp;&amp;&amp;x.               &#10;            .;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.::;::.:&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+++xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$..        &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$Xx;;;xx$&amp;&amp;$;.;$&amp;:.  :$;.       &#10;       ;$:   +&amp;+.+&amp;&amp;x.          ..x&amp;&amp;+.+&amp;+.  .$;.      &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;     .X;  .+&amp;::&amp;&amp;                    .&amp;&amp;::&amp;x.  ;X.     &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.&amp;&amp;&amp;&amp;&amp;&amp;x.    &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.$&amp;&amp;&amp;&amp;&amp;x.    &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     .X;...+&amp;::&amp;&amp;.                   .&amp;&amp;::&amp;x...;X.     &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;       ;$:   +&amp;+.x&amp;&amp;x..        ...x&amp;&amp;x.+&amp;+   .$;       &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$x+;;;+xX&amp;&amp;$;.;$&amp;:. .:$;        &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$.         &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+;+xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;            .+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.:;;;:.;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;             ...x&amp;&amp;&amp;&amp;&amp;&amp;.       .&amp;&amp;&amp;&amp;&amp;&amp;x..              &#10;                 ..;xX$$xx+++xxX$Xx;.                  &#10;                         .  ..                         &#10;                                                       &#10;                                                       &#10;" wrapText="true">
                                        <font>
                                           <Font name="Lucida Sans Typewriter Regular" size="4.0" />
                                        </font>
                                     </TextArea>
+
+                                    <!-- "50" Label -->
                                     <Label layoutX="64.0" layoutY="65.0" text="50 " textAlignment="CENTER" textFill="#00a31b">
                                        <font>
                                           <Font name="Rockwell" size="26.0" />
                                        </font>
                                     </Label>
+
                                  </children>
                               </StackPane>
+
+                              <!-- "Remove 50" Button -->
                               <Button layoutX="64.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#minusButton50" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #00A31B; -fx-background-radius: 50;" text="-" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
                            </children>
                         </VBox>
+
+                        <!-- 200 Chip Layout -->
                         <VBox alignment="CENTER" layoutX="204.0" layoutY="10.0" prefHeight="160.0" prefWidth="126.0">
                            <children>
+
+                              <!-- "Add 200" Button -->
                               <Button mnemonicParsing="false" onMouseClicked="#plusButton200" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #3464D5; -fx-background-radius: 50;" text="+" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
+                              <!-- Display the 200 chip with its value -->
                               <StackPane prefHeight="128.0" prefWidth="144.0">
                                  <children>
+
+                                    <!-- Chip image created with ASCII art -->
                                     <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="142.0" prefWidth="144.0" style="-fx-text-fill: #3464D5;" stylesheets="@textAreaStyle.css" text="                                                       &#10;                                                       &#10;                                                       &#10;                  .:+X$$XxxxxxX$$X+:.                  &#10;               .x&amp;&amp;&amp;&amp;&amp;&amp;        .&amp;&amp;&amp;&amp;&amp;&amp;x.               &#10;            .;$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.::;::.:&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+++xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$..        &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$Xx;;;xx$&amp;&amp;$;.;$&amp;:.  :$;.       &#10;       ;$:   +&amp;+.+&amp;&amp;x.          ..x&amp;&amp;+.+&amp;+.  .$;.      &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;     .X;  .+&amp;::&amp;&amp;                    .&amp;&amp;::&amp;x.  ;X.     &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.&amp;&amp;&amp;&amp;&amp;&amp;x.    &#10;     +&amp;&amp;&amp;&amp;&amp;&amp; +&amp;X                      .X&amp;+.$&amp;&amp;&amp;&amp;&amp;x.    &#10;     :&amp;&amp;&amp;&amp;X&amp;+.$&amp;;                     ;&amp;$.+&amp;X&amp;&amp;&amp;&amp;;     &#10;     .X;...+&amp;::&amp;&amp;.                   .&amp;&amp;::&amp;x...;X.     &#10;      :&amp;:  .x$::$&amp;x.               .+&amp;$::$x. .:&amp;;.     &#10;       ;$:   +&amp;+.x&amp;&amp;x..        ...x&amp;&amp;x.+&amp;+   .$;       &#10;        ;$:  .:&amp;$;.;$&amp;&amp;$x+;;;+xX&amp;&amp;$;.;$&amp;:. .:$;        &#10;         .$+.x&amp;&amp;&amp;&amp;&amp;x:..+X$$$$$X+..:x&amp;&amp;&amp;&amp;&amp;X.+$.         &#10;          .;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;$Xx+;+xX$&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.          &#10;            .+&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;;.:;;;:.;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;+.            &#10;             ...x&amp;&amp;&amp;&amp;&amp;&amp;.       .&amp;&amp;&amp;&amp;&amp;&amp;x..              &#10;                 ..;xX$$xx+++xxX$Xx;.                  &#10;                         .  ..                         &#10;                                                       &#10;                                                       &#10;" wrapText="true">
                                        <font>
                                           <Font name="Lucida Sans Typewriter Regular" size="4.0" />
                                        </font>
                                     </TextArea>
+
+                                    <!-- "200" Label -->
                                     <Label text="200 " textAlignment="CENTER" textFill="#3464d5">
                                        <font>
                                           <Font name="Rockwell" size="26.0" />
                                        </font>
                                     </Label>
+
                                  </children>
                               </StackPane>
+
+                              <!-- "Remove 200" Button -->
                               <Button layoutX="64.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#minusButton200" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: #3464D5; -fx-background-radius: 50;" text="-" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Button>
+
                            </children>
                         </VBox>
+
                      </children>
                   </HBox>
+
+                  <!-- Display of how much money does the player have and the player's bet -->
                   <HBox alignment="CENTER" layoutX="40.0" layoutY="326.0" prefHeight="51.0" prefWidth="514.0" spacing="25.0">
                      <children>
+
+                        <!-- "You have" Label -->
                         <Label fx:id="youHaveText" prefHeight="19.0" prefWidth="206.0" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="16.0" />
                            </font>
                         </Label>
+
+                        <!-- "Your bet" Label -->
                         <Label fx:id="youBetText" layoutX="164.0" layoutY="26.0" prefHeight="19.0" prefWidth="206.0" textAlignment="CENTER">
                            <font>
                               <Font name="Rockwell" size="16.0" />
                            </font>
                         </Label>
+
                      </children>
                   </HBox>
+
+                  <!-- "Place Bet" Button -->
                   <Button alignment="CENTER" layoutX="240.0" layoutY="383.0" mnemonicParsing="false" onMouseClicked="#placeBet" prefHeight="46.0" prefWidth="119.0" style="-fx-background-color: #E82F21; -fx-background-radius: 50; -fx-border-color: white; -fx-border-width: 5; -fx-border-radius: 50; -fx-border-style: dotted;" text="Place Bet" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Rockwell" size="18.0" />
                      </font>
                   </Button>
+
                </children>
             </AnchorPane>
+
          </children>
       </AnchorPane>
+
+
+      <!-- "How to play" Screen -->
       <AnchorPane fx:id="howToPlayScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #DDE5F8; -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #101014, #2A5ACB); -fx-border-width: 10.5;" visible="false">
          <children>
+
+            <!-- "How to Play" Label -->
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="45.0" prefHeight="49.0" prefWidth="499.0" text="How to Play" textAlignment="CENTER">
                <font>
                   <Font name="Rockwell" size="42.0" />
                </font>
             </Label>
+
+            <!-- "Game Rules" Scroll Pane -->
             <ScrollPane fx:id="scrollPane" layoutX="77.0" layoutY="102.0" prefHeight="288.0" prefWidth="446.0" style="-fx-background-color: transparent;" stylesheets="@scrollPaneStyle.css">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="428.0" style="-fx-background-color: transparent;">
+
+                 <!-- AnchorPane with the rules -->
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="428.0" style="-fx-background-color: transparent;">
                      <children>
+
+                        <!-- Rules -->
                         <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="5.0" prefHeight="713.0" prefWidth="412.0">
                            <children>
+
                               <Label prefHeight="18.0" prefWidth="421.0" text="Objective" textAlignment="CENTER">
                                  <font>
                                     <Font name="Rockwell" size="19.0" />
@@ -650,18 +909,25 @@
                                     <Insets bottom="25.0" />
                                  </VBox.margin>
                               </Label>
+
+                              <!-- "Understood" Button -->
                               <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#turnOffTutorial" prefHeight="51.0" prefWidth="140.0" style="-fx-background-color: #BA1512; -fx-border-color: #FFBD00; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 5; -fx-border-style: dotted;" text="Understood" textFill="WHITE">
                                  <font>
                                     <Font name="Rockwell" size="18.0" />
                                  </font>
                               </Button>
+
                            </children>
                         </VBox>
+
                      </children>
                   </AnchorPane>
+
               </content>
             </ScrollPane>
+
          </children>
       </AnchorPane>
+
    </children>
 </AnchorPane>

@@ -8,7 +8,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -437,6 +436,7 @@ public class BlackJackController {
         // Give the fourth card to the dealer
         Card fourthCard = newDeck.getFirst();
         dealerDeck.add(fourthCard);
+        newDeck.removeFirst();
 
         // Display player's score
         scorePlayerDisplay.setText(String.valueOf(getScore(playerDeck)));

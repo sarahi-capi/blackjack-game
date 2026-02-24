@@ -96,7 +96,7 @@
                               </Text>
 
                               <!-- Slot 7 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub7" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -117,7 +117,7 @@
                               </Text>
 
                               <!-- Slot 5 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub5" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -138,7 +138,7 @@
                               </Text>
 
                               <!-- Slot 6 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub6" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -159,7 +159,7 @@
                               </Text>
 
                               <!-- Slot 8 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub8" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -187,7 +187,7 @@
                               </Text>
 
                               <!-- Slot 3 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub3" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -208,7 +208,7 @@
                               </Text>
 
                               <!-- Slot 1 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub1" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -229,7 +229,7 @@
                               </Text>
 
                               <!-- Slot 2 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub2" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -250,7 +250,7 @@
                               </Text>
 
                               <!-- Slot 4 to display the Player's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="playerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="playerCardClub4" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -286,7 +286,7 @@
                               </Text>
 
                               <!-- Slot 7 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub7" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub7" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -307,7 +307,7 @@
                               </Text>
 
                               <!-- Slot 5 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub5" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub5" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -328,7 +328,7 @@
                               </Text>
 
                               <!-- Slot 6 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub6" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub6" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -349,7 +349,7 @@
                               </Text>
 
                               <!-- Slot 8 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub8" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub8" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -377,7 +377,7 @@
                               </Text>
 
                               <!-- Slot 3 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub3" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub3" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -398,7 +398,7 @@
                               </Text>
 
                               <!-- Slot 1 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub1" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub1" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -419,7 +419,7 @@
                               </Text>
 
                               <!-- Slot 2 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub2" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub2" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -440,7 +440,7 @@
                               </Text>
 
                               <!-- Slot 4 to display the Dealer's Card Club (this card club is displayed using an image created with ASCII art) -->
-                              <TextArea fx:id="dealerCardClub4" prefHeight="59.0" prefWidth="51.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
+                              <TextArea fx:id="dealerCardClub4" prefHeight="59.0" prefWidth="57.0" style="-fx-text-fill: white;" stylesheets="@textAreaStyle.css" wrapText="true">
                                  <font>
                                     <Font name="Lucida Sans Typewriter Regular" size="3.0" />
                                  </font>
@@ -505,14 +505,14 @@
             </Button>
 
             <!-- To display the player's score -->
-            <Button fx:id="scoreDealerDisplay" alignment="CENTER" layoutX="535.0" layoutY="159.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE" visible="false">
+            <Button fx:id="scoreDealerDisplay" alignment="CENTER" layoutX="535.0" layoutY="159.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="55.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE" visible="false">
                <font>
                   <Font name="Rockwell" size="19.0" />
                </font>
             </Button>
 
             <!-- To display the dealer's score -->
-            <Button fx:id="scorePlayerDisplay" alignment="CENTER" layoutX="18.0" layoutY="196.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="49.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="scorePlayerDisplay" alignment="CENTER" layoutX="18.0" layoutY="196.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="55.0" style="-fx-background-color: #101014; -fx-background-radius: 50; -fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="19.0" />
                </font>
